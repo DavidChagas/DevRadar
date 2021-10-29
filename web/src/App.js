@@ -37,8 +37,22 @@ function App() {
         setDevs([...devs, response.data]); //substituindo o push, para inserir o novo dev no array de devs o '...devs' copia o array e adiciona o response.data (dev cadastrado) no array
     }
 
+    async function handleAddDev(data){
+        const response = await api.post('/devs', data);
+        
+        setDevs([...devs, response.data]); //substituindo o push, para inserir o novo dev no array de devs o '...devs' copia o array e adiciona o response.data (dev cadastrado) no array
+    }
+
     return (
         <div id="app">
+            <aside>
+                <strong>Cadastrar</strong>
+                <DevForm onSubmit={handleAddDev}/>
+            </aside>
+            <aside>
+                <strong>Cadastrar</strong>
+                <DevForm onSubmit={handleAddDev}/>
+            </aside>
             <aside>
                 <strong>Cadastrar</strong>
                 <DevForm onSubmit={handleAddDev}/>
