@@ -37,6 +37,10 @@ function DevForm( {onSubmit} ){
                 <input name="github_username" id="github_username" value={github_username} onChange={e => setGithubUsername(e.target.value)} required/>
             </div>
             <div className="input-block">
+                <label htmlFor="github_username">Usuario Meta</label>
+                <input name="github_username" id="github_username" value={github_username} onChange={e => setGithubUsername(e.target.value)} required/>
+            </div>
+            <div className="input-block">
                 <label htmlFor="techs">Tecnologias</label>
                 <input name="techs" id="techs" value={techs} onChange={e => setTechs(e.target.value)} required/>
             </div>
